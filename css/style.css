@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  font-size: 16px;
+  font-family: "Lato", "pretendard", sans-serif;
+}
+
+.container {
+  width: 83.334vw;
+  margin: 0 auto;
+}
+
+/* GNB */
+#header {
+  width: 100%;
+  height: 120px;
+  position: fixed;
+
+  z-index: 2;
+}
+#header h1 > a {
+  position: absolute;
+  display: block;
+  width: 8.33vw;
+  height: 4vw;
+  top: 10%;
+  left: 50%;
+  background: url(../img/logo_gnb.png) no-repeat;
+  background-size: contain;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: all 1s;
+}
+/* 스크롤 시 헤더 변경 */
+#header.down {
+  background-color: #ffffff89;
+  box-shadow: 10px 10px 40px 0px rgba(69, 143, 175, 0.064);
+  -webkit-transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+#header.down > .gnb_wrap > .gnb_menu > h1 > a {
+  background: url(../img/logo_gnb2.png) no-repeat center;
+  background-size: contain;
+}
+.down > .gnb_wrap > div > ul > li > a {
+  color: #458faf;
+}
+.gnb_wrap {
+  position: fixed;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+
+  z-index: 5;
+}
+.gnb_wrap h1 {
+  position: absolute;
+  width: 10.417vw;
+  height: 5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gnb_wrap h1 a img {
+  height: 5rem;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+.gnb_wrap div {
+  width: 30%;
+}
+.gnb_wrap > div > ul {
+  width: 100%;
+  height: 100%;
+
+  font: 300 1rem "Lato";
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+.depth1 {
+  position: relative;
+}
+.gnb_w > ul > li > a {
+  display: block;
+  height: 100%;
+  padding: 3.125rem 0.375rem;
+
+  color: #fff;
+  transition: all 1s;
+}
+
+.depth2 {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+
+  padding: 0.25rem 1.75rem 0.5rem;
+  background-color: #ffffff89;
+  text-align: center;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.depth2 > li {
+  width: 6vw;
+}
+.depth2 a {
+  padding: 1.25rem 0;
+  display: block;
+  font-size: 0.75rem;
+  color: #458faf;
+}
+
+/* gnb 마우스오버 */
+.depth1 a:hover,
+.gnb_mypage > ul > li > a:hover {
+  font-weight: 500;
+}
+
+.depth1:hover .depth2 {
+  opacity: 1;
+  top: 100%;
+  z-index: -1;
+}
+.depth2 > li > a:hover {
+  font-weight: 700;
+}
+
+/* 배너 */
+#banner {
+  width: 100%;
+  overflow: hidden;
+}
+#banner > .banner_swiper {
+  height: 44vw;
+}
+.banner_wrap1 {
+  width: 100vw;
+  height: 44vw;
+  background: url(../img/banner1.png) no-repeat 0 -300px / cover;
+}
+.banner_wrap2 {
+  width: 100vw;
+  height: 44vw;
+  background: url(../img/banner2.png) no-repeat 0 -160px / cover;
+}
+.txt_wrap {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+}
+.txt_wrap img {
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 40vw;
+}
+.img_wrap {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img_wrap img {
+  width: 24vw;
+}
+.banner_wrap2 > .img_wrap img {
+  width: 22vw;
+}
+
+#banner .banner_product_more {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  bottom: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #fff;
+  border-radius: 400px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.banner_more_wrap {
+  position: relative;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner_more_wrap span {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #7bccea;
+}
+.banner_more_wrap span:nth-child(1) {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+.banner_more_wrap span:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.swiper-button-prev {
+  content: "";
+  display: block;
+  background: url(../img/prev_btn.png) no-repeat center/cover;
+  width: 40px;
+  height: 120px;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-40%);
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "";
+}
+.swiper-button-next {
+  content: "";
+  display: block;
+  background: url(../img/next_btn.png) no-repeat center/cover;
+  width: 40px;
+  height: 120px;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-40%);
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+
+/* 카드 스와이퍼 */
+#card {
+  width: 100%;
+}
+.card_wrap {
+  padding: 280px 0 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card_wrap .card_loop {
+  position: absolute;
+  top: 18%;
+  right: 26vw;
+  width: 20vw;
+
+  animation: rotate_image 80s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate_image {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.card_swiper {
+  position: relative;
+  width: 20vw;
+  height: auto;
+}
+.card_swiper .swiper-slide img {
+  width: 22vw;
+  height: auto;
+}
+
+/* 타이포 스크롤 액션 */
+
+#typo_motion {
+  height: 60vh;
+  margin: 8vh auto;
+  white-space: nowrap;
+  font-family: "Cormorant SC", serif;
+  font-size: 7.5rem;
+  color: #c1edff;
+}
+
+.typo_motion_wrap {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  overflow: hidden;
+}
+
+.typo_wrap1 {
+  display: flex;
+  animation: moveSlideshow1 60s linear infinite;
+}
+@keyframes moveSlideshow1 {
+  100% {
+    transform: translateX(-113.4%);
+  }
+}
+.typo_wrap2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  animation: moveSlideshow2 60s linear infinite;
+}
+@keyframes moveSlideshow2 {
+  100% {
+    transform: translateX(113.4%);
+  }
+}
+
+/* 제품 리스트 */
+#product_list h2 {
+  margin-bottom: 10vh;
+  font: 300 3.25rem "Lato", "pretendard", sans-serif;
+  text-align: center;
+  color: #777;
+}
+
+.item_wrap {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  font-family: "Lato", "pretendard", sans-serif;
+  width: 18vw;
+  height: 600px;
+}
+.item > a > .item_img {
+  width: 100%;
+  height: auto;
+  max-height: 18vw;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.item > a:hover > .item_img {
+  opacity: 1;
+}
+
+.item_img img {
+  width: 100%;
+  height: auto;
+}
+.item > a > .item_txt {
+  display: block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2vh;
+}
+.item_txt h3 {
+  font: 300 2rem "Cormorant SC", "pretendard", sans-serif;
+  font-style: italic;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.item_info {
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  color: #999;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.item_price {
+  color: #aeaeae;
+  font-size: 0.875rem;
+}
+
+.more_btn {
+  width: 40%;
+  margin: 4% auto;
+
+  border: 1px solid #999;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  padding: 9px 0px 11px 0px;
+  color: #999;
+}
+.item > a:hover .more_btn {
+  background-color: #999;
+  border-color: #fff;
+  color: #fff;
+}
+
+/* 브랜드스토리 */
+#brandstory {
+  position: relative;
+  height: 70vh;
+}
+.story_wrap {
+  margin-top: 8vh;
+  height: 100%;
+  background: linear-gradient(0deg, #c5dfea 0%, rgba(197, 223, 234, 0) 100%);
+}
+.story_wrap span {
+  display: block;
+  font: 300 2rem "Cormorant SC", "pretendard";
+}
+
+.brand_txt {
+  display: block;
+  position: relative;
+  top: 10vh;
+  margin: 0 auto;
+  width: 54vw;
+  background-size: contain;
+}
+
+.brand_product {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  width: 28vw;
+  transform: translateX(-50%);
+}
+
+#brandstory .banner_product_more {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  margin: 0 auto;
+  bottom: -25vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #fff;
+  border-radius: 400px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* footer */
+#footer {
+  position: relative;
+  z-index: 2;
+}
+.footer_wrap {
+  margin: 6vh auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_txt {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 64vw;
+  color: #76cff2;
+}
+.footer_txt > div {
+  width: 46vh;
+}
+.footer_txt > div > h4 {
+  font: 600 1.25rem "Lato", "pretendard";
+  margin-bottom: 2vh;
+}
+.footer_txt > div > span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font: 300 1rem "Lato", "pretendard";
+  padding: 1vh 0;
+}
+
+.footer_txt > .footer_deposit {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: row;
+}
+.footer_deposit span:nth-child(1) {
+  padding-right: 1vw;
+}
+.footer_follow a {
+  display: block;
+  color: #76cff2;
+}
+.footer_txt > .footer_follow {
+  width: 30vh;
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+  #header {
+    height: 104px;
+  }
+  .img_wrap {
+    top: 65%;
+  }
+  .txt_wrap img {
+    width: 32vw;
+  }
+  .banner_more_wrap {
+    top: 32%;
+  }
+  .swiper-button-prev {
+    top: 42%;
+  }
+  .swiper-button-next {
+    top: 42%;
+  }
+  .card_wrap {
+    padding: 200px 0 0px;
+  }
+  #typo_motion {
+    margin: 0 auto;
+  }
+  .story_wrap {
+    margin-top: 0;
+  }
+  #brandstory {
+    height: 54vh;
+  }
+  #brandstory .banner_product_more {
+    bottom: -16vh;
+  }
+  .brand_product {
+    width: 28vw;
+  }
+  .item_txt h3 {
+    font: 300 1.8rem "Cormorant SC", "pretendard", sans-serif;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+  .item {
+    height: 350px;
+  }
+  .item_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 46vw;
+  }
+  #banner .banner_product_more {
+    bottom: 12vh;
+  }
+  .banner_more_wrap {
+    top: 32%;
+  }
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 360px) {
+}
